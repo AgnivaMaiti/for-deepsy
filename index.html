@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>You're Cute Today!</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6fb;
+      color: #333;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #ff9bb3;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #d63384;
+      display: none;
+      text-align: center;
+    }
+    #cute-gif {
+      margin-top: 20px;
+      max-width: 80%;
+      display: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Just for You 💖</h1>
+  <button id="cute-btn">Click me!</button>
+  <div id="message">You look cute today!</div>
+  <img id="cute-gif" src="https://i.pinimg.com/originals/37/63/d8/3763d825e86e3cfb025ab88e3f70b65c.gif" alt="Cute Gif" />
+
+  <script>
+    document.getElementById("cute-btn").addEventListener("click", () => {
+      document.getElementById("message").style.display = "block";
+      const gif = document.getElementById("cute-gif");
+      gif.style.display = "block";
+      gif.src = gif.src; // restart gif animation
+    });
+  </script>
+</body>
+</html>
